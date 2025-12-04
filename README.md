@@ -1,34 +1,19 @@
-# 📂 WSL File Organizer CLI
+# 🦁 WSL Development Automation Tools (Liamwolf56)
 
-A Python command-line utility designed for the WSL environment to automatically clean and organize files in a target directory (like the Windows Downloads folder) based on their extension.
+This repository serves as a portfolio of Python Command-Line Interface (CLI) tools designed to solve common development and system administration challenges within a Linux/WSL environment. The projects showcase proficiency in file system manipulation, real-time monitoring, command-line UI/UX, and essential DevOps automation concepts.
 
-## ✨ Features
+---
 
-* **Cross-OS Path Support:** Seamlessly works with Windows file systems accessible via `/mnt/c/` in WSL.
-* **Dry Run Mode:** Preview file movements safely before execution using the `--dry-run` flag.
-* **Extension-Based Sorting:** Sorts files into designated subdirectories (e.g., PDFs, Images, Archives).
+## 1. 📂 WSL File Organizer (`organize.py`)
 
-## 🚀 Installation & Setup (WSL)
+A simple, effective command-line utility to automate the cleanup and organization of cluttered directories (e.g., Downloads, Documents) based on file type and age.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [Your Repository URL]
-    cd wsl-file-organizer
-    ```
-2.  **Create and activate the virtual environment:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-3.  **No external libraries needed for the current version (using only standard `pathlib` and `shutil`).**
+### **Key Concepts & Technologies:**
 
-## 💡 Usage
+* **File System I/O:** Reading, moving, and creating directories using Python's built-in `os` and `shutil` libraries.
+* **CLI Design:** Utilizing Python's `argparse` module to define command-line flags for controlling behavior (e.g., specifying the target directory, dry-run mode).
+* **Time & Date Logic:** Calculating file age (`os.path.getmtime`) and applying **age filtering** to ensure only older, inactive files are moved.
 
-The script requires the full path to the directory you wish to organize.
-
-**1. Dry Run (Recommended First)**
-
-Always test with the dry run to ensure files are moved as expected. Replace `liama` with your actual Windows username.
-
+### **Usage Example:**
 ```bash
-python organize.py "/mnt/c/Users/liama/Downloads" --dry-run
+python organize.py --target ~/Downloads --age-days 30 --dry-run
