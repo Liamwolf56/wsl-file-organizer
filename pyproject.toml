@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wsl-file-organizer"
+version = "0.1.0"
+description = "CLI tools for WSL/Linux file management and system automation."
+readme = "README.md"
+authors = [{name = "Liam", email = "liam@example.com"}] # Use your actual name/email
+license = {file = "LICENSE"} # We'll create this next
+requires-python = ">=3.8"
+dependencies = [
+    # Include all dependencies for all packaged tools
+    "psutil", 
+    "rich", 
+]
+
+[project.urls]
+Homepage = "https://github.com/Liamwolf56/wsl-file-organizer"
+"Bug Tracker" = "https://github.com/Liamwolf56/wsl-file-organizer/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+# CHANGE THIS:
+# wsl-organize = "wsl_tools:main"
+
+# TO THIS:
+wsl-organize = "wsl_tools:cli"

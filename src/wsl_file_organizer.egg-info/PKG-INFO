@@ -1,0 +1,64 @@
+Metadata-Version: 2.4
+Name: wsl-file-organizer
+Version: 0.1.0
+Summary: CLI tools for WSL/Linux file management and system automation.
+Author-email: Liam <liam@example.com>
+License: MIT License
+        
+        Copyright (c) 2025 Liam
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/Liamwolf56/wsl-file-organizer
+Project-URL: Bug Tracker, https://github.com/Liamwolf56/wsl-file-organizer/issues
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil
+Requires-Dist: rich
+Dynamic: license-file
+
+# 🦁 WSL Development Automation Tools (Liamwolf56)
+
+This repository is a portfolio showcasing Python Command-Line Interface (CLI) tools designed to automate key development and system administration tasks within a **Linux/WSL** environment.
+
+The projects demonstrate core skills in **File System Management**, **Real-time Monitoring**, **CLI UI/UX**, and **DevOps Automation** using robust Python libraries.
+
+***
+
+## 🛠️ Project Summary & Core Technologies
+
+| Project | Primary Function | Core Skills Demonstrated | Key Technologies |
+| :--- | :--- | :--- | :--- |
+| **1. File Organizer** (`organize.py`) | Automates cleaning and sorting directories based on **file type and age**. | File System I/O, CLI Argument Parsing, Logic | `os`, `shutil`, `argparse` |
+| **2. Terminal Dashboard** (`dashboard.py`) | Provides a **real-time system monitor** displaying CPU/RAM and Git status. | Real-time Monitoring, Command Execution, UI/UX | `psutil`, `subprocess`, `rich` |
+| **3. Dotfile Manager** (`dotfile_manager.py`) | Automates developer setup by managing configurations using **Symbolic Links (Symlinks)**. | DevOps Automation, Symlink Management, Backup/Restore Logic | `os.symlink`, `pathlib` |
+
+***
+
+### **Command Reference**
+
+| Tool | Action | Command |
+| :--- | :--- | :--- |
+| **File Organizer** | Preview Cleanup | `python organize.py --target ~/Downloads --age-days 30 --dry-run` |
+| **Terminal Dashboard** | Start Monitor | `python terminal_dashboard/dashboard.py` |
+| **Dotfile Manager** | Setup (Create Symlinks) | `python dotfile_manager/dotfile_manager.py` |
+| **Dotfile Manager** | Uninstall (Restore Backups) | `python dotfile_manager/dotfile_manager.py --uninstall` |
+
+---

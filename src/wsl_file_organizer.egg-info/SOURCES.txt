@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/wsl_file_organizer.egg-info/PKG-INFO
+src/wsl_file_organizer.egg-info/SOURCES.txt
+src/wsl_file_organizer.egg-info/dependency_links.txt
+src/wsl_file_organizer.egg-info/entry_points.txt
+src/wsl_file_organizer.egg-info/requires.txt
+src/wsl_file_organizer.egg-info/top_level.txt
+src/wsl_tools/__init__.py
