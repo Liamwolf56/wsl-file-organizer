@@ -1,19 +1,28 @@
 # 🦁 WSL Development Automation Tools (Liamwolf56)
 
-This repository serves as a portfolio of Python Command-Line Interface (CLI) tools designed to solve common development and system administration challenges within a Linux/WSL environment. The projects showcase proficiency in file system manipulation, real-time monitoring, command-line UI/UX, and essential DevOps automation concepts.
+This repository is a portfolio showcasing Python Command-Line Interface (CLI) tools designed to automate key development and system administration tasks within a **Linux/WSL** environment.
+
+The projects demonstrate core skills in **File System Management**, **Real-time Monitoring**, **CLI UI/UX**, and **DevOps Automation** using robust Python libraries.
+
+***
+
+## 🛠️ Project Summary & Core Technologies
+
+| Project | Primary Function | Core Skills Demonstrated | Key Technologies |
+| :--- | :--- | :--- | :--- |
+| **1. File Organizer** (`organize.py`) | Automates cleaning and sorting directories based on **file type and age**. | File System I/O, CLI Argument Parsing, Logic | `os`, `shutil`, `argparse` |
+| **2. Terminal Dashboard** (`dashboard.py`) | Provides a **real-time system monitor** displaying CPU/RAM and Git status. | Real-time Monitoring, Command Execution, UI/UX | `psutil`, `subprocess`, `rich` |
+| **3. Dotfile Manager** (`dotfile_manager.py`) | Automates developer setup by managing configurations using **Symbolic Links (Symlinks)**. | DevOps Automation, Symlink Management, Backup/Restore Logic | `os.symlink`, `pathlib` |
+
+***
+
+### **Command Reference**
+
+| Tool | Action | Command |
+| :--- | :--- | :--- |
+| **File Organizer** | Preview Cleanup | `python organize.py --target ~/Downloads --age-days 30 --dry-run` |
+| **Terminal Dashboard** | Start Monitor | `python terminal_dashboard/dashboard.py` |
+| **Dotfile Manager** | Setup (Create Symlinks) | `python dotfile_manager/dotfile_manager.py` |
+| **Dotfile Manager** | Uninstall (Restore Backups) | `python dotfile_manager/dotfile_manager.py --uninstall` |
 
 ---
-
-## 1. 📂 WSL File Organizer (`organize.py`)
-
-A simple, effective command-line utility to automate the cleanup and organization of cluttered directories (e.g., Downloads, Documents) based on file type and age.
-
-### **Key Concepts & Technologies:**
-
-* **File System I/O:** Reading, moving, and creating directories using Python's built-in `os` and `shutil` libraries.
-* **CLI Design:** Utilizing Python's `argparse` module to define command-line flags for controlling behavior (e.g., specifying the target directory, dry-run mode).
-* **Time & Date Logic:** Calculating file age (`os.path.getmtime`) and applying **age filtering** to ensure only older, inactive files are moved.
-
-### **Usage Example:**
-```bash
-python organize.py --target ~/Downloads --age-days 30 --dry-run
